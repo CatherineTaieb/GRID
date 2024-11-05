@@ -1,0 +1,33 @@
+.social-media{
+    background-color: $purple-500;
+    color: $white;
+
+    h1{
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+
+    &__special{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__highlighted{
+        color: $yellow-500;
+    }
+
+    &__italic{
+        font-style: italic;
+        margin-left: 1vh;
+    }
+
+    img{
+        max-width: 60%;
+        margin-bottom: 0;
+    }
+
+    p{
+        margin-top: 0;
+    }
+
+}

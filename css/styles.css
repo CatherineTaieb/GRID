@@ -1,0 +1,165 @@
+body {
+  font-size: 18px;
+  font-family: "DM Sans";
+  background-color: hsl(0, 0%, 94%);
+  margin: 0;
+  padding: 0;
+}
+body main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+body main h1, body main h2 {
+  font-weight: 500;
+}
+body main img {
+  max-width: 280px;
+}
+body main section {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh 1.5vh;
+}
+@media (min-width: 900px) {
+  body main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(20, 1fr);
+    height: 80vh;
+    margin: 30px 50px;
+  }
+  body main .create {
+    grid-column: 1/2;
+    grid-row: 1/11;
+  }
+  body main .use-ai {
+    grid-column: 1/2;
+    grid-row: 11/21;
+  }
+  body main .social-media {
+    grid-column: 2/4;
+    grid-row: 1/9;
+  }
+  body main .schedule {
+    grid-column: 4/5;
+    grid-row: 1/15;
+  }
+  body main .manage {
+    grid-column: 2/3;
+    grid-row: 9/15;
+  }
+  body main .audience {
+    grid-column: 2/3;
+    grid-row: 15/21;
+  }
+  body main .maintain {
+    grid-column: 3/4;
+    grid-row: 9/15;
+  }
+  body main .followers {
+    grid-column: 3/5;
+    grid-row: 15/21;
+  }
+}
+
+.social-media {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 100%);
+}
+.social-media h1 {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+.social-media__special {
+  display: flex;
+  justify-content: center;
+}
+.social-media__highlighted {
+  color: hsl(39, 100%, 71%);
+}
+.social-media__italic {
+  font-style: italic;
+  margin-left: 1vh;
+}
+.social-media img {
+  max-width: 60%;
+  margin-bottom: 0;
+}
+.social-media p {
+  margin-top: 0;
+}
+
+.manage {
+  background-color: hsl(0, 0%, 100%);
+}
+.manage h2 {
+  margin: 1vh 2vh;
+}
+
+.maintain {
+  background-color: hsl(39, 100%, 71%);
+  padding-left: 2vh;
+}
+.maintain h2 {
+  margin-top: 2vh;
+}
+.maintain img {
+  max-width: 50%;
+  align-self: flex-start;
+}
+
+.schedule {
+  background-color: hsl(254, 88%, 90%);
+}
+.schedule p {
+  text-align: center;
+  padding: 0 5vh;
+}
+
+.followers {
+  background-color: hsl(256, 67%, 59%);
+  padding-top: 3vh;
+  color: hsl(0, 0%, 100%);
+}
+.followers img {
+  width: 70%;
+}
+.followers h2 {
+  margin: 4vh auto 2vh auto;
+  max-width: 50%;
+}
+
+.audience {
+  background-color: hsl(0, 0%, 100%);
+  align-items: flex-start;
+  padding: 3vh;
+}
+.audience h2 {
+  margin: 0;
+  font-size: 3rem;
+}
+.audience img {
+  max-width: 60%;
+}
+
+.create {
+  background-color: hsl(31, 66%, 93%);
+  align-items: flex-start;
+  padding: 4vh;
+}
+
+.use-ai {
+  background-color: hsl(39, 100%, 71%);
+  align-items: flex-start;
+  padding: 0 4vh;
+}
+.use-ai img {
+  max-width: 60%;
+  padding-bottom: 3vh;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,86 @@
+body{
+    font-size: 18px;
+    font-family: 'DM Sans';
+    background-color: hsl(0, 0%, 94%);
+    margin: 0;
+    padding: 0;
+
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap : 20px;
+
+        
+        h1,h2{
+            font-weight: 500;
+        }
+    
+    
+        img{
+            max-width: 280px;
+        }
+    
+        section{
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1vh 1.5vh;
+        }
+
+
+        @media (min-width:900px){
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: repeat(20,1fr);
+            height: 80vh;
+            margin: 30px 50px;
+
+
+            .create{
+                grid-column: 1/2;
+                grid-row: 1/11;
+            }
+
+            .use-ai{
+                grid-column: 1/2;
+                grid-row: 11/21;
+            }
+
+            .social-media{
+                grid-column: 2/4;
+                grid-row: 1/9;
+            }
+
+            .schedule{
+                grid-column: 4/5;
+                grid-row: 1/15;
+            }
+
+            .manage{
+                grid-column: 2/3;
+                grid-row: 9/15;
+            }
+
+            .audience{
+                grid-column: 2/3;
+                grid-row: 15/21;
+            }
+
+            .maintain{
+                grid-column: 3/4;
+                grid-row: 9/15;
+            }
+
+            .followers{
+                grid-column: 3/5;
+                grid-row: 15/21; 
+            }
+        }
+
+    }
+
+}
