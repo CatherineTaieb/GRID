@@ -1,14 +1,25 @@
 body {
   font-size: 18px;
-  font-family: "DM Sans";
-  background-color: hsl(0, 0%, 94%);
+  font-family: "DM Sans", sans-serif;
+  background-color: hsl(0, 0%, 90%);
   margin: 0;
   padding: 0;
+}
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    justify-content: center;
+  }
 }
 body main {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+}
+body main h1 {
+  font-size: 2rem;
+}
+body main h2 {
+  font-size: 1.3rem;
 }
 body main h1, body main h2 {
   font-weight: 500;
@@ -22,15 +33,32 @@ body main section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1vh 1.5vh;
+  margin: 16px 16px;
+  max-width: 280px;
+  justify-self: center;
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   body main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(20, 1fr);
-    height: 80vh;
-    margin: 30px 50px;
+    gap: 16px;
+    max-width: 1440px;
+    max-height: 1088px;
+  }
+  body main h1 {
+    font-size: 5rem;
+    line-height: 1;
+  }
+  body main h2 {
+    font-size: 3rem;
+    line-height: 0.8;
+  }
+  body main section {
+    max-width: 100%;
+    justify-self: stretch;
+    padding: 16px;
+    margin: 16px;
   }
   body main .create {
     grid-column: 1/2;
@@ -39,30 +67,82 @@ body main section {
   body main .use-ai {
     grid-column: 1/2;
     grid-row: 11/21;
+    display: flex;
+    justify-content: flex-start;
+  }
+  body main .use-ai h2 {
+    margin: 0;
+  }
+  body main .use-ai img {
+    max-width: 90%;
+    padding-top: 80px;
   }
   body main .social-media {
     grid-column: 2/4;
     grid-row: 1/9;
   }
+  body main .social-media__special {
+    display: inline;
+  }
   body main .schedule {
     grid-column: 4/5;
     grid-row: 1/15;
+    display: block;
+    overflow: hidden;
+  }
+  body main .schedule h2 {
+    margin-left: 32px;
+    font-size: 2.5rem;
+  }
+  body main .schedule img {
+    max-width: 150%;
+    margin-left: 32px;
+  }
+  body main .schedule p {
+    font-size: 1.4rem;
   }
   body main .manage {
     grid-column: 2/3;
     grid-row: 9/15;
+    overflow: hidden;
+    display: block;
+  }
+  body main .manage h2 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  body main .manage img {
+    max-width: 145%;
+    object-position: right center;
+    margin: 0;
   }
   body main .audience {
     grid-column: 2/3;
     grid-row: 15/21;
   }
+  body main .audience h2 {
+    font-size: 4.5rem;
+  }
+  body main .audience p {
+    margin: 32px 0;
+  }
   body main .maintain {
     grid-column: 3/4;
     grid-row: 9/15;
+    overflow: hidden;
+  }
+  body main .maintain h2 {
+    font-size: 2.5rem;
+    padding-top: 80px;
+  }
+  body main .maintain img {
+    max-width: 90%;
   }
   body main .followers {
     grid-column: 3/5;
     grid-row: 15/21;
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -72,7 +152,7 @@ body main section {
 }
 .social-media h1 {
   text-align: center;
-  margin-bottom: 2vh;
+  margin-bottom: 16px;
 }
 .social-media__special {
   display: flex;
@@ -83,7 +163,7 @@ body main section {
 }
 .social-media__italic {
   font-style: italic;
-  margin-left: 1vh;
+  margin-left: 5px;
 }
 .social-media img {
   max-width: 60%;
@@ -91,25 +171,31 @@ body main section {
 }
 .social-media p {
   margin-top: 0;
+  padding-bottom: 16px;
 }
 
 .manage {
   background-color: hsl(0, 0%, 100%);
 }
 .manage h2 {
-  margin: 1vh 2vh;
+  margin: 16px;
+}
+.manage img {
+  max-width: 90%;
+  margin-top: 16px;
 }
 
 .maintain {
   background-color: hsl(39, 100%, 71%);
-  padding-left: 2vh;
 }
 .maintain h2 {
-  margin-top: 2vh;
+  margin-top: 16px;
+  padding-left: 16px;
 }
 .maintain img {
   max-width: 50%;
   align-self: flex-start;
+  padding-left: 16px;
 }
 
 .schedule {
@@ -117,7 +203,10 @@ body main section {
 }
 .schedule p {
   text-align: center;
-  padding: 0 5vh;
+  padding: 0 16px;
+}
+.schedule img {
+  max-width: 90%;
 }
 
 .followers {
@@ -126,40 +215,60 @@ body main section {
   color: hsl(0, 0%, 100%);
 }
 .followers img {
-  width: 70%;
+  width: 60%;
 }
 .followers h2 {
-  margin: 4vh auto 2vh auto;
-  max-width: 50%;
+  margin: 16px auto;
+  max-width: 60%;
 }
 
 .audience {
   background-color: hsl(0, 0%, 100%);
   align-items: flex-start;
-  padding: 3vh;
 }
 .audience h2 {
   margin: 0;
   font-size: 3rem;
+  padding: 0 16px;
+}
+.audience p {
+  padding: 0 16px;
+  margin: 0;
 }
 .audience img {
   max-width: 60%;
+  padding: 16px;
 }
 
 .create {
   background-color: hsl(31, 66%, 93%);
   align-items: flex-start;
-  padding: 4vh;
+}
+.create h2 {
+  padding: 16px;
+  margin: 0;
+}
+.create h2::after {
+  content: "quicker.";
+  color: hsl(256, 67%, 59%);
+  font-style: italic;
+}
+.create img {
+  max-width: 60%;
+  padding: 0 16px;
 }
 
 .use-ai {
   background-color: hsl(39, 100%, 71%);
   align-items: flex-start;
-  padding: 0 4vh;
+}
+.use-ai h2 {
+  padding: 0 16px;
 }
 .use-ai img {
   max-width: 60%;
-  padding-bottom: 3vh;
+  padding-bottom: 16px;
+  padding-left: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */

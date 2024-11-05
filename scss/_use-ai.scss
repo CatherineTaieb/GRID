@@ -1,10 +1,15 @@
 .use-ai{
     background-color: $yellow-500;
     align-items: flex-start;
-    padding: 0 4vh;
+
+
+    h2{
+        padding: 0 16px;
+    }
 
     img{
         max-width: 60%;
-        padding-bottom: 3vh;
+        padding-bottom: 16px;
+        padding-left: 16px;
     }
 }
